@@ -32,7 +32,7 @@ KERNELDIR=$(readlink -f .);
 # Some variables
 VER=B--B-Kernel
 export LOCALVERSION=~`echo $VER`
-export KBUILD_BUILD_USER=B--B
+export KBUILD_BUILD_USER=smstiv
 export KBUILD_BUILD_HOST=JDCTeam
 
 CLEANUP()
@@ -197,7 +197,7 @@ BUILD_NOW()
 
 		# create the flashable zip file from the contents of the output directory
 		echo "Make flashable zip..........."
-		zip -r B--B-Kernel-"${GETVER}"-N-"$(date +"[%H-%M]-[%d-%m]-Mi5-PWR-CORE")".zip * >/dev/null
+		zip -r smstiv-B--B-Kernel-"${GETVER}"-N-"$(date +"[%H-%M]-[%d-%m]-Mi5-PWR-CORE")".zip * >/dev/null
 		stat boot.img
 		rm -f ./*.img
 		cd ..
